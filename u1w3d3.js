@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     addTaskBtn.addEventListener("click", function () {
         const taskText = taskInput.value.trim()
 
-        // Se il campo di input contiene qualcosa prosegue altrimenti non crea nulla 
+        // Se il campo di input contiene qualcosa prosegue altrimenti non crea nulla e invierà un allert
         if (taskText !== "") {
             // Nuovo elemento <li> per il task
             const taskItem = document.createElement("li")
@@ -17,9 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // pulsante delete per eliminare il task 
             const deleteBtn = document.createElement("button")
-            deleteBtn.textContent = "delete"
+            deleteBtn.textContent = "Delete"
             deleteBtn.classList.add("deleteBtn")
-            // pulsante delete
             taskItem.appendChild(deleteBtn)
             // aggiunta del gestore eventi per il Bottone "delete"
             taskList.addEventListener("click", function (event) {
